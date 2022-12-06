@@ -16,4 +16,5 @@ body {
     width: 960px;
     height: 960px;
     background-color: aqua;
+    flex-direction: column;
 }
