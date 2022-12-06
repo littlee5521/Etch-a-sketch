@@ -24,5 +24,10 @@ function createGrid(input,){
      counter++;
     }
 }
-
-createGrid(100)
+createGrid(30)
+const pixelList = document.querySelectorAll('.pixel')
+pixelList.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+    div.classList.toggle('black')
+    });
+  });
