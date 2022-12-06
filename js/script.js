@@ -14,7 +14,7 @@ function createGrid(input,){
        pixels.style.flex ='auto'
        pixels.style.flexShrink = '0'
        pixels.classList.add('pixel')
-       size = Math.floor(960/input);
+       size = (960/input);
        pixels.style.width = size+'px'
        pixels.style.height = size+'px'
        wip.appendChild(pixels)
