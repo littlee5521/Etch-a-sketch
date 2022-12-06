@@ -24,10 +24,22 @@ function createGrid(input,){
      counter++;
     }
 }
-createGrid(30)
+createGrid(7)
 const pixelList = document.querySelectorAll('.pixel')
 pixelList.forEach((div) => {
     div.addEventListener('mouseover', () => {
     div.classList.toggle('black')
     });
   });
+const input1 = document.querySelector('.input')
+const inputBtn = document.querySelector('.input-btn')
+function updateCanvas() {
+    console.log('did i run')
+    const rowList = document.querySelectorAll('.row')
+    rowList.forEach((element) => {
+        canvas.removeChild(document.querySelector('.row'))
+        console.log('bfuj')
+    })
+}
+inputBtn.addEventListener('onclick',updateCanvas() );  
+createGrid(27)
