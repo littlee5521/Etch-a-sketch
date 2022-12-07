@@ -3,6 +3,8 @@ let counter1 = 0;
 let size = 0;
 const canvas= document.querySelector(".canvas")
 function createGrid(input,){
+    counter=0;
+    counter1=0;
     while (counter<input){
     const wip = document.createElement('div')
      wip.style.display='flex'
@@ -22,24 +24,27 @@ function createGrid(input,){
      }
      canvas.appendChild(wip)
      counter++;
+     console.log('No i did run ')
     }
 }
 createGrid(7)
-const pixelList = document.querySelectorAll('.pixel')
+function addhover(){
+  const pixelList = document.querySelectorAll('.pixel')
 pixelList.forEach((div) => {
     div.addEventListener('mouseover', () => {
     div.classList.toggle('black')
     });
   });
+}
+addhover()
 const input1 = document.querySelector('.input')
 const inputBtn = document.querySelector('.input-btn')
 function updateCanvas() {
-    console.log('did i run')
     const rowList = document.querySelectorAll('.row')
     rowList.forEach((element) => {
         canvas.removeChild(document.querySelector('.row'))
-        console.log('bfuj')
     })
+    createGrid(input1.value)
+    addhover()
 }
-inputBtn.addEventListener('onclick',updateCanvas() );  
-createGrid(27)
+ inputBtn.addEventListener('click',updateCanvas );
